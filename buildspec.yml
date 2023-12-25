@@ -9,14 +9,30 @@ phases:
   install:
     runtime-versions:
       dotnet: 6.0
+  pre-build:
+    commands:
+      - echo Restore started on `date`
+      - export PATH="$PATH:/root/.dotnet/tools"
+      - pip install --upgrade awscli
+      #- aws configure set profile $Profile
+      #- aws configure set region $Region
+      #- aws configure set aws_access_key_id $AWS_ACCESS_KEY_ID_PARAM
+      #- aws configure set aws_secret_access_key $AWS_SECRET_ACCESS_KEY_PARAM
+      - cd LambdaSample2
+      - cd src
+      - cd LambdaSample2
+      - dotnet clean 
+      - dotnet restore
   build:
     commands:
       - echo Deployment started on `date`for function $LAMBDA_FUNCTION_NAME
-      - export PATH="$PATH:/root/.dotnet/tools"
+      #- export PATH="$PATH:/root/.dotnet/tools"
       - dotnet new --install Amazon.Lambda.Templates::*
       - dotnet tool install -g Amazon.Lambda.Tools
+      - dotnet tool update -g Amazon.Lambda.Tools
       # Change directory to Project(.csproj) file folder
-      - cd $PROJECT_FILE_DIR_PATH
+      #- cd $PROJECT_FILE_DIR_PATH
       - ls
       # Build and deploy to lambda function
-      - dotnet lambda deploy-function --function-name $LAMBDA_FUNCTION_NAME
+      #- dotnet lambda deploy-function --function-name $LAMBDA_FUNCTION_NAME
+      - dotnet lambda deploy-function "LambdaSample2"
