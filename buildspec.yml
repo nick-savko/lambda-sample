@@ -5,6 +5,7 @@ env:
     LAMBDA_FUNCTION_NAME: "LambdaSample2"
   # Variables specific to this file
     PROJECT_FILE_DIR_PATH: "LambdaSample2/src/LambdaSample2"
+    DOTNET_ROOT: /root/.dotnet
 phases:
   install:
     runtime-versions:
