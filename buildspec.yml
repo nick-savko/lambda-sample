@@ -36,6 +36,6 @@ artifacts:
   files: '**/*'
   name: BuildArtifacts
   discard-paths: yes
-  base-directory: dist
+  base-directory: $CODEBUILD_SRC_DIR/$PROJECT_FILE_DIR_PATH
 
 
