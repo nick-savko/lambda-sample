@@ -9,7 +9,7 @@ phases:
   install:
     runtime-versions:
       dotnet: 6.0
-  pre-build:
+  pre_build:
     commands:
       - echo Restore started on `date`
       - export PATH="$PATH:/root/.dotnet/tools"
