@@ -17,5 +17,6 @@ phases:
       - dotnet tool install -g Amazon.Lambda.Tools
       # Change directory to Project(.csproj) file folder
       - cd $PROJECT_FILE_DIR_PATH
+      - ls
       # Build and deploy to lambda function
       - dotnet lambda deploy-function --function-name $LAMBDA_FUNCTION_NAME
