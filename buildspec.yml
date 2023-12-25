@@ -4,7 +4,7 @@ env:
   # Set/Override value for below variables using Enviroment Variables of codebuild pipeline 
     LAMBDA_FUNCTION_NAME: "LambdaSample2"
   # Variables specific to this file
-    PROJECT_FILE_DIR_PATH: "LambdaSample2"
+    PROJECT_FILE_DIR_PATH: "LambdaSample2/src/LambdaSample2"
 phases:
   install:
     runtime-versions:
