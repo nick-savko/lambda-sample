@@ -21,4 +21,8 @@ phases:
       - dotnet tool install -g Amazon.Lambda.Tools
       - dotnet tool update -g Amazon.Lambda.Tools
       - cd $CODEBUILD_SRC_DIR/$PROJECT_FILE_DIR_PATH
+      - aws --version
+      - dotnet --version
+      - echo $CODEBUILD_SRC_DIR
+      - echo $PROJECT_FILE_DIR_PATH
       - dotnet lambda deploy-function $LAMBDA_FUNCTION_NAME
