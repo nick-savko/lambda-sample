@@ -4,4 +4,4 @@ Resources:
       Type: AWS::Lambda::Function
       Properties:
         Name: "LambdaSample2"
-        CurrentVersion: "$LATEST"
+        CurrentVersion: "1"
