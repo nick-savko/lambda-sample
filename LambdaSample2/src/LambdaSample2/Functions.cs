@@ -50,7 +50,7 @@ namespace LambdaSample2
       var response = new APIGatewayProxyResponse
       {
         StatusCode = (int)HttpStatusCode.OK,
-        Body = "Hello AWS Serverless",
+        Body = "If you see it - CI/CD works!!!",
         Headers = new Dictionary<string, string> { { "Content-Type", "text/plain" } },
       };
 
