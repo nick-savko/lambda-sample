@@ -1,6 +1,0 @@
-version: 0.0
-Resources:
-  - LambdaSample2:
-      Type: AWS::Lambda::Function
-      Properties:
-        Name: "LambdaSample2"
